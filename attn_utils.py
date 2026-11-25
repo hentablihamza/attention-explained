@@ -91,7 +91,8 @@ def plot_attention(weights, query_labels, key_labels, ax=None, title=None,
     weights = np.asarray(weights)
     if ax is None:
         _, ax = plt.subplots(figsize=(0.6 * len(key_labels) + 2, 0.5 * len(query_labels) + 1.5))
-    im = ax.imshow(weights, cmap=cmap, vmin=0, vmax=vmax if vmax is not None else max(weights.max(), 1e-9))
+    top = vmax if vmax is not None else max(weights.max(), 1e-9)
+    im = ax.imshow(weights, cmap=cmap, vmin=0, vmax=top)
     ax.set_xticks(range(len(key_labels)))
     ax.set_xticklabels(key_labels, rotation=45, ha="right")
     ax.set_yticks(range(len(query_labels)))
@@ -99,7 +100,7 @@ def plot_attention(weights, query_labels, key_labels, ax=None, title=None,
     ax.set_xlabel("key (attended to)")
     ax.set_ylabel("query (attending)")
     if annotate and weights.size <= 400:
-        thr = weights.max() * 0.6
+        thr = top * 0.6
         for r in range(weights.shape[0]):
             for c in range(weights.shape[1]):
                 ax.text(c, r, fmt.format(weights[r, c]), ha="center", va="center", fontsize=7,
