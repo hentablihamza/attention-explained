@@ -1,0 +1,11 @@
+# Attention, Explained - dependencies for local/CI use.
+# On Google Colab everything is already installed; each notebook's first cell checks anyway.
+# CPU-only PyTorch is plenty: every model in the course trains in seconds.
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu   (optional, smaller download)
+numpy>=1.24
+torch>=2.1
+matplotlib>=3.7
+scikit-learn>=1.3
+jupyter>=1.0
+notebook>=7.0
+nbconvert>=7.0

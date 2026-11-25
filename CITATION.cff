@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: "Attention, Explained: a step-by-step course on the attention mechanism"
+message: "If you use these materials, please cite them using the metadata below."
+type: software
+authors:
+  - family-names: Hentabli
+    given-names: Hamza
+    orcid: "https://orcid.org/0000-0002-9530-2815"
+repository-code: "https://github.com/hentablihamza/attention-explained"
+url: "https://github.com/hentablihamza/attention-explained"
+abstract: >
+  A hands-on, 12-notebook course that builds the attention mechanism and the Transformer
+  from scratch through NLP: tokenization and embeddings, queries/keys/values, scaled
+  dot-product attention worked by hand, attention heatmaps, self-attention and coreference,
+  multi-head attention, positional encoding, the transformer block, causal masking, a tiny
+  transformer in NumPy and PyTorch trained live, and the path to BERT and GPT. Every figure
+  is generated from code executed in the notebooks; each notebook runs in Google Colab.
+keywords:
+  - attention
+  - transformer
+  - self-attention
+  - natural language processing
+  - deep learning
+  - PyTorch
+  - education
+  - tutorial
+date-released: "2026-11-24"
